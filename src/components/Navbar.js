@@ -12,7 +12,7 @@ function Navbar() {
   const {pathname} = useRouter();
 
   return (
-    <nav className="flex">
+    <nav className='flex gap-5 m-4 bg-amber-300'>
       {links.map(({id, title, path}) => (
         <Link 
           key={id} 
