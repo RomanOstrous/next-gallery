@@ -14,16 +14,16 @@ const Gallery = () => {
         <Link
           key={id}
           href={path}
-          className="block"
+          className="transition hover:scale-105"
         >
           <Image
             src={img}
             width={400}
             height={300}
-            className="object-cover w-[400px] h-[300px]"
+            className="object-cover w-[400px] h-[300px] rounded-lg"
             alt={title}
           />
-          <div className="text-center mt-2">{title}</div>
+          <div className="text-center mt-2 text-2xl text-violet-800">{title}</div>
         </Link>
       ))}
     </div>
