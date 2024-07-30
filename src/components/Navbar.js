@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -12,12 +13,15 @@ function Navbar() {
   const {pathname} = useRouter();
 
   return (
-    <nav className='flex gap-5 m-4 bg-amber-300'>
+    <nav className='flex justify-center gap-10'>
       {links.map(({id, title, path}) => (
         <Link 
           key={id} 
           href={path}
-          className={pathname === path ? ('Вказати стиль'): null}
+          className={classNames('text-2xl font-bold', {
+            'text-pink-900': pathname === path,
+            'text-white': pathname !== path
+          })}
         >
           {title}
         </Link>
