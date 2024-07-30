@@ -25,7 +25,7 @@ function Navbar() {
         <Link 
           key={id} 
           href={path}
-          className={classNames(pres.className,'text-2xl font-bold', {
+          className={classNames(pres.className,'text-2xl font-bold hover:text-yellow-200', {
             'text-pink-900': pathname === path,
             'text-white': pathname !== path,
           })}
