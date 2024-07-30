@@ -1,19 +1,19 @@
-import Head from "next/head";
 import Layout from "../components/layout";
+import { Rubik_Bubbles} from 'next/font/google';
 import '../styles/global.css';
-import Link from "next/link";
+
+const pres = Rubik_Bubbles({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
 
 const MyApp = ({ Component, pageProps }) => (
-  <>
-    <Head>
-      <Link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-    </Head>
-    <Layout>
-      <main className="">
-        <Component {...pageProps} />
-      </main>
-    </Layout>
-  </>
+  <Layout>
+    <main className={pres.className}>
+      <Component {...pageProps} />
+    </main>
+  </Layout>
 );
 
 export default MyApp;

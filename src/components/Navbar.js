@@ -1,6 +1,13 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { Press_Start_2P } from 'next/font/google';
+
+const pres = Press_Start_2P({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
 
 const links = [
   {id: 1, title: 'Home', path: '/'},
@@ -18,9 +25,9 @@ function Navbar() {
         <Link 
           key={id} 
           href={path}
-          className={classNames('text-2xl font-bold', {
+          className={classNames(pres.className,'text-2xl font-bold', {
             'text-pink-900': pathname === path,
-            'text-white': pathname !== path
+            'text-white': pathname !== path,
           })}
         >
           {title}
