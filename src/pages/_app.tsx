@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from '../components/Layout';
 import { Rubik_Bubbles} from 'next/font/google';
 import '../styles/global.css';
 
