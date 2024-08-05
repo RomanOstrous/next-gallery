@@ -34,7 +34,12 @@ const photo:FC<Props> = ({photo}) => {
         <title>Photos</title>
       </Head>
       
-      <button onClick={() => router.back()}>Назад</button>
+      <button
+        onClick={() => router.back()}
+        className="m-4 px-4 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600 transition"
+      >
+        Back
+      </button>
       <OnePhoto photo={photo}/>
     </div>
   )

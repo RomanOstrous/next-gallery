@@ -6,16 +6,16 @@ type Props = {
   photo: PhotoType
 };
 
-const OnePhoto:FC<Props> = ({photo}) => {
-  const {title, url, id} = photo;
+const OnePhoto: FC<Props> = ({ photo }) => {
+  const { title, url, id } = photo;
 
   return (
-    <div className="border p-2 rounded-lg">
-      <p>Photo №{id}</p>
+    <div className="flex flex-col items-center gap-4">
+      <p className="text-gray-600 mb-2">Photo №{id}</p>
       <Image src={url} alt={title} width={150} height={150} className="rounded-lg" />
-      <p className="text-center mt-2">{title}</p>
+      <p className="text-center text-gray-800 font-semibold">{title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default OnePhoto
+export default OnePhoto;
